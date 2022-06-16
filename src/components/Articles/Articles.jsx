@@ -14,7 +14,7 @@ const Articles = () => {
     const abstract = article.abstract.substring(0, 110);
     const author = article.byline;
     const date = article.published_date.substring(0, 10);
-    const img = article.multimedia[1].url;
+    const img = article.multimedia[0].url;
 
     const truncateAfterWord = (str, chars, placeholder = '...') =>  str.length < chars ? str : `${str.substr( 0, str.substr(0, chars - placeholder.length).lastIndexOf(" "))}${placeholder}`;
 
