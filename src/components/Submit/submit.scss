@@ -1,0 +1,102 @@
+@import "../../sass/colors.scss";
+@import "../../sass/widths.scss";
+@import "../../sass/fonts.scss";
+
+.form {
+  max-width: 600px;
+  margin: 240px auto 0;
+  border: 8px solid $black;
+  padding: 2em;
+  background-color: $white;
+
+  .formTitle {
+    font-family: $title2;
+    color: $black;
+    font-size:32px;
+  }
+  .TYM{
+    margin-top:3em;
+    text-align: left;
+}
+  .postInfo {
+    .postTitle {
+      color: $black;
+      margin-bottom: 1em;
+
+      .labelTitle {
+        color: $black;
+        margin-bottom: 1em;
+        font-size: 18px;
+      }
+      .inputTitle {
+        margin-top: 1em;
+        font-family: Montserrat;
+        text-align: left;
+        padding: 0 !important;
+        color: $black;
+        width: 99%;
+        height: 1.5em;
+      }
+    }
+    .postAbstract {
+      .labelAbstract {
+        color: $black
+      }
+      .inputAbstract {
+        margin-top: 1em;
+        font-family: Montserrat;
+        color: $black;
+        width: 99%;
+        height: 140px !important;
+        resize: none;
+      }
+    }
+    .postDetails {
+      margin-top: 1em;
+      display: flex;
+      
+      .postAuthor{
+          width:50%;
+          .inputAuthor{
+            margin-top: 1em;
+              width:95%;
+              height: 1.5em;
+          }
+      }
+      .postDate{
+          padding-left:1.5em;
+          width:50%;
+          .inputDate{
+            margin-top: 1em;
+              width:98%;
+              height: 1.5em;
+              padding: 0.1em 0;
+          }
+      }
+    }
+    .postUpload {
+        margin-top: 1em;
+        display: flex;
+        .postImage{
+            width:50%;
+            .inputImage{
+                margin-top: 1em;           
+                height:2em;
+            }
+        }
+        .submitButton {
+            margin-left:1.2em;
+            font-size: 16px;
+            color: white;
+            font-weight: 800;
+            font-family:$title2;
+            background-color: $black;
+            width: 50%;
+            height: 3.2em;
+          }
+    }
+  }
+
+
+}
+

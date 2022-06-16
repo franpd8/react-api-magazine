@@ -1,25 +1,26 @@
 import { useState } from "react";
-import "./Reservation.css";
-let reservations = JSON.parse(localStorage.getItem("RESERVATIONS")) || [];
-const Reservation = () => {
+import "./submit.scss";
+let publications = JSON.parse(localStorage.getItem("publications")) || [];
+const Post = () => {
   const initialState = {
-    username: "",
-    email: "",
-    pax: "",
+    author: "",
+    title: "",
+    abstract: "",
     date: "",
   };
   const [data, setData] = useState(initialState);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
-  
 
   const clearState = () => {
     setData({ ...initialState });
   };
 
   const handleInputChange = (event) => {
-    if (data.username.length + 1 < 3) {
-      setMessage(<span className="title">"Username must be at least 3 characters"</span>);
+    if (data.username.title + 1 < 3) {
+      setMessage(
+        <span className="message">"The title of the post can't be empty"</span>
+      );
       setBtnDisabled(true);
     } else {
       setMessage(null);
@@ -30,37 +31,68 @@ const Reservation = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    reservations.push(data);
-    localStorage.setItem("RESERVATIONS", JSON.stringify(reservations));
+    publications.push(data);
+    localStorage.setItem("publications", JSON.stringify(publications));
     clearState();
-    setMessage(<span className="title">Hemos recibido tu reserva. ¡Nos vemos en nada!</span>);
-    // setTimeout(() => {
-    //   setMessage("");
-    // }, 4000);
+    setMessage(
+      <p className="TYM">
+        Our editors will check your post, thank you!
+      </p>
+    );
   };
   return (
     <div className="form">
-      <h2 className="title"> Haz tu reserva</h2>
+      <h2 className="formTitle"> Submit your post</h2>
       <form onSubmit={handleSubmit}>
-        <div className="reservationInfo">
-          <div className="rPax">
-            <label for="pax" className="rTitle"> Comensales</label><br/>
-            <select
-              value={data.pax}
+        <div className="postInfo">
+          <div className="postTitle">
+            <label for="title" className="labelTitle">
+              Post Title
+            </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Introduce here your post title"
+              value={data.title}
               onChange={handleInputChange}
-              name="pax"
-              className="inputPax"
-            >
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-              <option>6</option>
-            </select>
+              name="title"
+              autoFocus
+              className="inputTitle"
+            />
           </div>
-          <div className="rDate">
-            <label for="pax" className="rTitle"> Fecha</label><br/>
+          <div className="postAbstract">
+            <label for="Abstract" className="labelAbstract">
+              Post Abstract
+            </label>
+            <br />
+            <textarea
+              placeholder="Here will be your post, tell us what's new!"
+              value={data.abstract}
+              onChange={handleInputChange}
+              name="abstract"
+              className="inputAbstract"
+            ></textarea>
+          </div>
+          <div className="postDetails">
+          <div className="postAuthor">
+            <label for="author" className="labelAuthor">
+              Author
+            </label>
+            <br />
+            <input
+              type="text"
+              placeholder="Who wrote it"
+              value={data.author}
+              onChange={handleInputChange}
+              name="author"
+              className="inputAuthor"
+            />
+          </div>
+          <div className="postDate">
+            <label for="date" className="labelDate">
+              Date
+            </label>
+            <br />
             <input
               type="date"
               placeholder="date"
@@ -71,38 +103,21 @@ const Reservation = () => {
               min={new Date().toISOString().split("T")[0]}
             />
           </div>
-        </div> 
-        <div className="reservationContact">
-        <div className="rName">
-         
-            <label for="pax" className="rTitle"> Nombre</label><br/>
-            <input
-              type="text"
-              placeholder="name"
-              value={data.username}
-              onChange={handleInputChange}
-              name="username"
-              className="inputName"
-            />
-          </div>
-          <div className="rEmail">
-            <label for="pax" className="rTitle"> Email</label><br/>
-            <input
-              type="email"
-              placeholder="email"
-              value={data.email}
-              onChange={handleInputChange}
-              name="email"
-              className="inputEmail"
-            />
-          </div>
         </div>
-        <button type="submit" className="rButton">
-          Enviar
+        
+        <div className="postUpload">
+          <div className="postImage">
+            <label for="image" className="labelImage">Choose a picture for the post :</label>
+            <input type="file" accept="image/png, image/jpeg"className="inputImage"></input>
+          </div>
+          <button type="submit" className="submitButton">
+          Post!
         </button>
+        </div>
+        </div>
       </form>
       {message}
     </div>
   );
 };
-export default Reservation;
+export default Post;
