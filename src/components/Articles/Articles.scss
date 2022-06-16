@@ -1,0 +1,75 @@
+@import "../../sass/colors.scss";
+@import "../../sass/widths.scss";
+@import "../../sass/fonts.scss";
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+.articles {
+  margin: 200px auto;
+  width: $screen;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .article:first-child {
+        
+    width: $large;
+    
+    .article-img:first-child{
+        width:$large;
+    }
+
+}
+  .article {
+    box-shadow: 0 0 8px -3px rgba(0,0,0,.75);
+    background-color: $white;
+    margin: 20px;
+    width: $medium;
+    font-family: Montserrat;
+    font-size: 12px;
+
+    .article-info {
+      padding: 20px;
+    }
+    .article-title {
+      font-family: $title2 !important;
+      font-weight: 700 !important;
+      all: unset;
+      color: $black;
+      font-size: 32px;
+    }
+    .article-abstract {
+    font-size:14px;
+      
+    }
+    .article-a-d {
+      display: flex;
+      justify-content: space-between;
+      margin: 2em 0 0 ;
+    }
+    .article-author {
+    //   border: 2px solid red;
+      font-weight: 500;
+    }
+    
+    .article-date {
+    font-style: italic;
+    }
+    
+    .article-img {
+      width: $medium;
+      height: 230px;
+      object-fit: cover;
+    }
+    
+
+    
+}
+  //   .article:nth-child(-n+3){
+  //     background-color:pink;
+  //   }
+
+ 
+}
