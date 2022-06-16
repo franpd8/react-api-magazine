@@ -1,85 +1,52 @@
-.header{
-display:flex;
-height:80px;
-padding:2em;
-justify-content: space-between;
-background-color: white;
-position:fixed;
-top:0;
-width:100%;
-box-shadow: 0 0 8px -3px rgba(0,0,0,.75);
-
-.nav{
-    display:flex;
+@import "../../sass/colors.scss";
+@import "../../sass/widths.scss";
+@import "../../sass/fonts.scss";
+.header {
+  display: flex;
+  height: 80px;
+  padding: 2em;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 8px -3px rgba(0, 0, 0, 0.75);
+  a {
+    all: unset;
+    margin-left: 1em;
+    color: $black;
+    cursor: pointer;
+  }
+  .nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: 95%;
-}
-.nav .logo{
-    position:absolute;
-    left:50%;
-
-    transform: translateY(-50%) translateX(-65%);
-    
-}
-}
-
-.header .nav > a:hover{
-    border-bottom: 0;
-    padding-bottom:0;
-}
-.header a{
-    all:unset;
-    margin-left:  1em;
-    color:#16219e;
-    cursor: pointer;
-}
-.header a:hover{
-    border-bottom: 2px solid #16219e;
-    padding-bottom:2px;
-}
-.logo{
-    width:auto;
-    height:80px;
-    margin-right:2em;
-}
-.search{
-    background-color: #767fe2;
-    display:flex;
-    align-items: center;
-    width:320px;
-    margin:1em;
-    border-radius:16px;
-}
-.searchIcon{
-    width:auto;
-    height:20px;
-    margin-left:1em;
-    
+    .logo {
+      position: absolute;
+      left: 50%;
+      width: auto;
+      height: 80px;
+      margin-right: 2em;
+      transform: translateY(-50%) translateX(-65%);
+    }
+  }
 }
 
 @media (max-width: 800px) {
-    .search {
-        width:240px;
-    }
+  .search {
+    width: 240px;
   }
+}
 
 @media (max-width: 680px) {
-
-    .header{
-        height:40px;
-    }
-    .header a{
-        margin-left:  0.5em;
-    }
-    .logo{
-        width:auto;
-        height:40px;
-        margin-right:1em;
-    }
-    .search {
-        width:52px;
-        background-color: none;
-        margin:0;
-    }
+  .header {
+    height: 40px;
   }
+
+  .logo {
+    width: auto;
+    height: 40px;
+    margin-right: 1em;
+  }
+}
