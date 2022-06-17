@@ -36,7 +36,7 @@ const Post = () => {
     clearState();
     setMessage(
       <p className="TYM">
-        Our editors will check your post, thank you!
+        Miranda Priestly will review your article personally, better be good...
       </p>
     );
   };
