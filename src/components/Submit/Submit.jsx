@@ -7,9 +7,10 @@ const Post = () => {
     title: "",
     abstract: "",
     date: "",
+    file:"",
   };
   const [data, setData] = useState(initialState);
-  const [btnDisabled, setBtnDisabled] = useState(true);
+//   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
   const clearState = () => {
@@ -17,20 +18,25 @@ const Post = () => {
   };
 
   const handleInputChange = (event) => {
-    if (data.username.title + 1 < 3) {
-      setMessage(
-        <span className="message">"The title of the post can't be empty"</span>
-      );
-      setBtnDisabled(true);
-    } else {
-      setMessage(null);
-      setBtnDisabled(false);
-    }
+    // if (data.title < 2) {
+    //   setMessage(
+    //     <span className="message">"The title of the post can't be empty"</span>
+    //   );
+    //   setBtnDisabled(true);
+    // } else {
+    //   setMessage(null);
+    //   setBtnDisabled(false);
+    // }
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // if(data.author && data.title && data.date && data.abstract){
+    //     setBtnDisabled(true)
+    // } else{
+    //     setBtnDisabled(false)
+    // }
     publications.push(data);
     localStorage.setItem("publications", JSON.stringify(publications));
     clearState();
@@ -108,9 +114,9 @@ const Post = () => {
         <div className="postUpload">
           <div className="postImage">
             <label for="image" className="labelImage">Choose a picture for the post :</label>
-            <input type="file" accept="image/png, image/jpeg"className="inputImage"></input>
+            <input type="file" accept="image/png, image/jpeg" name="file"className="inputImage"></input>
           </div>
-          <button type="submit" className="submitButton">
+          <button type="submit"  className="submitButton">
           Post it !
         </button>
         </div>
