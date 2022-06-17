@@ -111,7 +111,7 @@ const Post = () => {
             <input type="file" accept="image/png, image/jpeg"className="inputImage"></input>
           </div>
           <button type="submit" className="submitButton">
-          Post!
+          Post it !
         </button>
         </div>
         </div>

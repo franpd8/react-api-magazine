@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+#  React Magazine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice
 
-## Available Scripts
+* Sobre el proyecto
+    * Instalación y despliegue
+    * Tecnologías usadas
+    * Origen
+    * Objetivos
+    * Concepto e inspiración
 
-In the project directory, you can run:
+* Retos presentados
 
-### `npm start`
+* Agradecimientos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Autores
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Sobre el proyecto
 
-### `npm test`
+### 💫 Instalación y despliegue
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para descargarte el repositorio, en Visual Studio, abre una terminal y ejecuta el comando siguiente:
 
-### `npm run build`
+```
+$ git clone https://github.com/franpd8/react-api-magazine
+```
+ 
+Seguidamente tendrás que descargar los módulos externos con node (Axios, Sass). Para ello, realiza el siguiente comando.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+$ npm i
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Después, correr la aplicación de React en nuestro navegador a través de:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ npm start
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 💻 Tecnologías usadas
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* HTML
+* CSS
+* Sass
+* Javascript
+* React
+* React-GlobalContext
+* React-Router
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Origen
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Este proyecto está pensado como un ejercicio en The Bridge que nos permita poner en práctica los nuevos conocimientos adquiridos sobre React, concretamente utilizando React Router y Sass. Vienen de la mano el familizarnos con crear diversos componentes en React y poder acceder de forma global al contenido de ciertas funciones que nos han ayudado a desarrollar el proyecto. 
 
-## Learn More
+### ⚔️ Objetivos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Crear una API REST que sea capaz de lo siguiente:
+* Un mini-proyecto de React para practicar todos los elementos básicos de React ya vistos.
+* Implementar una "web de noticias", en este caso una revista digital.
+* Uso de [NYT News API](https://developer.nytimes.com/apis) (puedes leer su [documentación aquí ↗](https://developer.nytimes.com/get-started))
+* Uso del router React
+* Utilizar componentes anidados (cabecera, home, pie de página, formulario, lista de noticias).
+* Utilizar React Context
+* Utilizar SASS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### ⚔️ Funciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+En esta revista digital, tenemos dos elementos principales: <u>home</u> y <u>submit</u>. En el primer elemento podemos leer los artículos recogidos por la API y en el segundo, podemos enviar artículos al <i>localStorage</i>
 
-### Analyzing the Bundle Size
+### ⚔️ React Router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Gracias a React Router podemos crear diferentes rutas dentro de nuestra aplicación de React en una SPA y navegar entre componentes (artículos y formulario).
 
-### Making a Progressive Web App
+ * [x] /home. Donde vemos los artículos traídos por la API.
+ * [x] /submit. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+### ⚔️ Sass
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Implementando Sass, podemos hacer uso de variables para los colores, tipografías y anchos de los diversos elementos durante la maquetación, de cara a poder reutilizarlos y modificarlos más adelante. 
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔜 Futuras Implementaciones
 
-### `npm run build` fails to minify
+* Diseño responsive. 
+* Crear una variable para permitir distintas llamadas a la API y variar el contenido de la revista. 
+* Borrar imágenes antiguas una vez son actualizadas. 
+* Permitir subir varias imágenes a cada post.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+##  ♥️ Agradecimientos
+
+A todos los compis([Mike](https://github.com/MrSetOne),[Xavi](https://github.com/xavi-mat),[Germán](https://github.com/Molerog),[Vane](https://github.com/vaneebg/) y profes en general: ([Sofía](https://github.com/SofiaPinilla), [Geer](https://github.com/GeerDev) e [Iván](https://github.com/ivanpuebla10)]).
+
+
+## Autor
+
+### 🐱[Fran](https://github.com/franpd8)🐱

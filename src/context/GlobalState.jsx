@@ -3,6 +3,7 @@ import axios from "axios";
 import AppReducer from "./AppReducer"
 
 const ARTICLES_SECTION = "fashion"
+// The following values are allowed: arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, world
 const API_KEY= "rGWlSKS7Rc6HGPbSd1kFOKfa3dkuzFTC"
 const initialState = {
   articles: []

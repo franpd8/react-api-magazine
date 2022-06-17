@@ -1,8 +1,6 @@
 import { useContext, useEffect } from "react";
 import { GlobalContext } from "../../context/GlobalState";
 import "./Articles.scss";
-// import './fonts/Doppelganger.otf';
-
 const Articles = () => {
   const { articles, getArticles } = useContext(GlobalContext);
   useEffect(() => {
